@@ -1,0 +1,11 @@
+extends layout
+
+block main
+  if spiritLists === undefined || spiritLists.length === 0
+    p You don't have any recipes listed. 
+  else
+    ul#lists
+      each spiritList in spiritLists
+        li
+          a(href=`/spirits/${spiritList.title.toLowerCase()}`)
+            h2 #{spiritList.title} Cocktails

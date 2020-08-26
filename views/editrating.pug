@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Rate this #{cocktailRecipe.name} recipe!
+
+block main 
+  form(action=`/spirits/${spiritName}/${cocktailName}/editrating` method="post")
+    dl
+      dt
+        label(for="cocktailRating") Enter a number from 1 (worst) to 5 (best):
+
+      dd 
+         input(type="text"
+              name="cocktailRating"
+              placeholder="1-5")
+
+    fieldset.actions
+      input(type="submit" value="Save")
+      a(href=`/spirits/${spiritName}/${cocktailName}`) Cancel

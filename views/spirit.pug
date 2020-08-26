@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  header
+    h1 #{spirit.title} Cocktails
+    h2 Select a cocktail to view recipe and rating.
+
+block main
+    ul#lists
+      each recipe in spirit.recipes
+        li 
+          a(href=`/spirits/${spiritName}/${recipe.name.toLowerCase()}`)
+            h2 #{recipe.name} 
+            p #{recipe.rating}
+            //- add rating title above (maybe display stars)
+
+    a(href=`/spirits/`)
+      h2 Back

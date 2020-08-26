@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  header
+    h1 #{cocktailRecipe.name} Ingridents:
+
+block main
+  ul#ingridentlist
+    each ingrident in cocktailRecipe.ingridents
+      li 
+        h2 #{ingrident} 
+
+  ul#rating
+    li
+      a(href=`/spirits/${spiritName}/${cocktailName}/editrating`)
+        h2 Edit Rating: #{cocktailRecipe.rating}
+
+  a(href=`/spirits/${spiritName}`)
+      h2 Back
