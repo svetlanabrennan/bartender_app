@@ -171,7 +171,7 @@ form fieldset.actions a:hover {
 
 #lists h2 {
   float: left;
-  width: 95%;
+  width: 100%;
   color: #666666;
   margin: 0 0 10px;
   text-align: center;
@@ -181,16 +181,18 @@ form fieldset.actions a:hover {
   color: #666666;
   float: right;
   font-size: 0.9rem;
-  text-align: right;
-  width: 5%;
+  text-align: center;
+  width: 100%;
 }
 
 #lists li {
   background-color: #f6f6f6;
   border-radius: 8px;
-  margin: 0 0 10px;
+  margin: 0 auto 10px auto;
   padding: 18px 25px 18px 57px;
   position: relative;
+  text-align: center;
+  width: 50%
 }
 
 #lists a {
@@ -199,20 +201,20 @@ form fieldset.actions a:hover {
   overflow: hidden;
 }
 
-#ingridentlist li {
-  background-color: #ede3e3;
+#ingredientlist li,
+#rating li {
   border-radius: 8px;
-  margin: 0 0 10px;
   padding: 18px 25px 18px 57px;
   position: relative;
-  width: 25%
+  text-align: center;
+  width: 50%;
+  margin: 0 auto 10px auto;
+}
+
+#ingredientlist li {
+  background-color: #ede3e3;
 }
 
 #rating li {
   background-color: #d79191;
-  border-radius: 8px;
-  margin: 0 0 10px;
-  padding: 18px 25px 18px 57px;
-  position: relative;
-  width: 25%
 }

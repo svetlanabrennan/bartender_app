@@ -1,11 +1,12 @@
 extends layout
 
 block main
-  if spiritLists === undefined || spiritLists.length === 0
+  - console.log(spirits);
+  if spirits === undefined || spirits.length === 0
     p You don't have any recipes listed. 
   else
     ul#lists
-      each spiritList in spiritLists
+      each spiritList in spirits
         li
           a(href=`/spirits/${spiritList.title.toLowerCase()}`)
-            h2 #{spiritList.title} Cocktails
+            h2 #{spiritList.title}

@@ -3,7 +3,7 @@ extends layout
 block content
   header
     h1 #{spirit.title} Cocktails
-    h2 Select a cocktail to view recipe and rating.
+    h2 Select a cocktail to view recipe and edit rating.
 
 block main
     ul#lists
@@ -11,8 +11,23 @@ block main
         li 
           a(href=`/spirits/${spiritName}/${recipe.name.toLowerCase()}`)
             h2 #{recipe.name} 
-            p #{recipe.rating}
-            //- add rating title above (maybe display stars)
+            - if (recipe.rating === "5")
+              img(src="/images/5_stars.png" style="width:110px; height: 25px;")
+
+            - if (recipe.rating === "4")
+              img(src="/images/4_stars.png" style="width:90px; height: 25px;")
+
+            - if (recipe.rating === "3")
+              img(src="/images/3_stars.png" style="width:65px; height: 25px;")
+
+            - if (recipe.rating === "2")
+              img(src="/images/2_stars.png" style="width:45px; height: 25px;")
+
+            - if (recipe.rating === "1")
+              img(src="/images/1_star.png" style="width:25px; height: 25px;")
+           
+            - if (recipe.rating === "Not Rated")
+                p Not rated
 
     a(href=`/spirits/`)
       h2 Back

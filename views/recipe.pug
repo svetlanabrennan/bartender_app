@@ -2,10 +2,10 @@ extends layout
 
 block content
   header
-    h1 #{cocktailRecipe.name} Ingridents:
+    h1 #{cocktailRecipe.name} Ingredients and Rating:
 
 block main
-  ul#ingridentlist
+  ul#ingredientlist
     each ingrident in cocktailRecipe.ingridents
       li 
         h2 #{ingrident} 
